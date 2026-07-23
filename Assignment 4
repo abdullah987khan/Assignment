@@ -1,0 +1,158 @@
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius * self.radius
+
+    def perimeter(self):
+        return 2 * 3.14 * self.radius
+
+c = Circle(5)
+
+print("Area =", c.area())
+print("Perimeter =", c.perimeter())
+
+from datetime import date
+
+class Person:
+    def __init__(self, name, country, birth_year):
+        self.name = name
+        self.country = country
+        self.birth_year = birth_year
+
+    def get_age(self):
+        age = date.today().year - self.birth_year
+        return age
+
+person = Person("Rayan", "Pakistan", 2009)
+
+print("Name:", person.name)
+print("Country:", person.country)
+print("Date of Birth: 6 September 2009")
+print("Age:", person.get_age())
+
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+    def subtract(self, a, b):
+        return a - b
+
+    def multiply(self, a, b):
+        return a * b
+
+    def divide(self, a, b):
+        return a / b
+
+cal = Calculator()
+
+print("Addition:", cal.add(10, 5))
+print("Subtraction:", cal.subtract(10, 5))
+print("Multiplication:", cal.multiply(10, 5))
+print("Division:", cal.divide(10, 5))
+
+students = [
+    "Ali",
+    "Ahmed",
+    "Rayan",
+    "Ayan",
+    "Usman",
+    "Hamza",
+    "Bilal",
+    "Zain",
+    "Saad",
+    "Hassan",
+    "Abdullah",
+    "Huzaifa",
+    "Daniyal",
+    "Farhan",
+    "Talha"
+]
+
+for name in students:
+    print(name)
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for number in numbers:
+    if number % 2 == 0:
+        print(number)
+
+numbers = [15, 8, 22, 5, 18]
+
+largest = numbers[0]
+smallest = numbers[0]
+
+for num in numbers:
+    if num > largest:
+        largest = num
+
+    if num < smallest:
+        smallest = num
+
+print("Largest Number =", largest)
+print("Smallest Number =", smallest)
+
+fruits = ["Apple", "Banana", "Apple", "Orange", "Apple"]
+
+count = 0
+
+for fruit in fruits:
+    if fruit == "Apple":
+        count = count + 1
+
+print("Apple appears", count, "times")
+
+numbers = [25, 10, 40, 15, 5]
+
+numbers.sort()
+print("Ascending Order:", numbers)
+
+numbers.sort(reverse=True)
+print("Descending Order:", numbers)
+
+list1 = [10, 20, 30, 40, 50]
+
+list2 = list1.copy()
+
+print("First List:", list1)
+print("Second List:", list2)
+
+students = [
+    ["Jawad", 18],
+    ["Abdullah gora", 17],
+    ["Rayan", 16]
+]
+
+print("Student Names:")
+for student in students:
+    print(student[0])
+
+print("Student Ages:")
+for student in students:
+    print(student[1])
+
+numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+
+print("Total Numbers =", len(numbers))
+print("Sum =", sum(numbers))
+print("Average =", sum(numbers) / len(numbers))
+print("Maximum Value =", max(numbers))
+print("Minimum Value =", min(numbers))
+
+numbers = [10, 20, 30, 40, 50]
+
+print("Original List:", numbers)
+
+numbers.append(60)
+print("After Append:", numbers)
+
+numbers.insert(2, 25)
+print("After Insert:", numbers)
+
+numbers.remove(40)
+print("After Remove:", numbers)
+
+numbers.pop()
+print("After Pop:", numbers)
